@@ -1,0 +1,22 @@
+2023-06-26 22:57:48,435 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-06-26 22:58:19,103 [Worker-2: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:SRS_App:0.0.1-SNAPSHOT @ /Users/sankhasubhramondal/Own_Project/Login_Register_Logout_Profile_Application/Backend_Work/Login_Register_Logout_Profile-Backend/pom.xml.
+2023-06-26 22:58:20,895 [Worker-2: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Login_Register_Logout_Profile-Backend/src/main/java
+2023-06-26 22:58:20,896 [Worker-2: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Login_Register_Logout_Profile-Backend/src/main/resources
+2023-06-26 22:58:20,900 [Worker-2: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Login_Register_Logout_Profile-Backend/src/main/resources
+2023-06-26 22:58:20,903 [Worker-2: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Login_Register_Logout_Profile-Backend/src/test/java
+2023-06-26 22:58:21,180 [Worker-2: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 10 sec
+2023-06-26 22:58:23,580 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2023-06-26 22:58:23,605 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2023-06-26 22:58:23,609 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/sankhasubhramondal/Own_Project/Login_Register_Logout_Profile_Application/Backend_Work/Login_Register_Logout_Profile-Backend/src/test/resources
+2023-06-26 22:58:48,842 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2023-06-26 22:58:48,842 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2023-06-26 22:58:48,845 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/sankhasubhramondal/Own_Project/Login_Register_Logout_Profile_Application/Backend_Work/Login_Register_Logout_Profile-Backend/src/test/resources
+2023-06-26 23:28:17,750 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-06-28 09:13:43,453 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-06-28 09:13:43,954 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2023-06-28 09:14:30,665 [Worker-17: Launching Login_Register_Logout_Profile-Backend - SrsAppApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2023-06-28 09:14:30,695 [Worker-17: Launching Login_Register_Logout_Profile-Backend - SrsAppApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2023-06-28 09:14:30,701 [Worker-17: Launching Login_Register_Logout_Profile-Backend - SrsAppApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/sankhasubhramondal/Own_Project/Login_Register_Logout_Profile_Application/Backend_Work/Login_Register_Logout_Profile-Backend/src/test/resources
+2023-06-28 16:36:39,133 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2023-06-28 16:36:39,159 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2023-06-28 16:36:39,161 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/sankhasubhramondal/Own_Project/Login_Register_Logout_Profile_Application/Backend_Work/Login_Register_Logout_Profile-Backend/src/test/resources
