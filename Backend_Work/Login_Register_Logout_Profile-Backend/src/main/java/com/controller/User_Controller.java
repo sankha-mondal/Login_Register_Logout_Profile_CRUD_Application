@@ -38,6 +38,14 @@ public class User_Controller {
 //*************************************************** : CRUD Operation : ***************************************************************** 
 //=======================================================================================================================================
 
+		//  http://localhost:8585/users_credentials/user/get_data
+	
+		@GetMapping("/get_data")
+		public Map<String, String> getData() {
+			return Map.of("Name","Sankha Subhra");
+		}
+
+
 		//  Retrieve Operation:-  Op:1
 		//  http://localhost:8585/users_credentials/user/getAll
 
