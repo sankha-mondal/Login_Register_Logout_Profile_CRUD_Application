@@ -38,6 +38,7 @@ public class User_Controller {
 //*************************************************** : CRUD Operation : ***************************************************************** 
 //=======================================================================================================================================
 
+		//  Simple Get Operation:- Op:1A
 		//  http://localhost:8585/users_credentials/user/get_data
 	
 		@GetMapping("/get_data")
@@ -46,7 +47,7 @@ public class User_Controller {
 		}
 
 
-		//  Retrieve Operation:-  Op:1
+		//  Retrieve Operation:-  Op:1B
 		//  http://localhost:8585/users_credentials/user/getAll
 
 		@GetMapping("/getAll")
