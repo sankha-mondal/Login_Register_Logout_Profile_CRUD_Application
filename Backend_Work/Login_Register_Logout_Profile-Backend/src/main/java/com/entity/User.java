@@ -95,39 +95,28 @@ public class User {    //  User = Login-Credentials
         this.uRole = uRole;
     }
 
- 
-
     public String getuAddress() {
         return uAddress;
     }
-
- 
 
     public void setuAddress(String uAddress) {
         this.uAddress = uAddress;
     }
 
- 
-
     public String getUrl() {
         return url;
     }
-
- 
 
     public void setUrl(String url) {
         this.url = url;
     }
 
- 
 
     @Override
     public String toString() {
         return "User [uEmail=" + uEmail + ", uName=" + uName + ", uPhone=" + uPhone + ", uPassword=" + uPassword
                 + ", uGender=" + uGender + ", uRole=" + uRole + ", uAddress=" + uAddress + ", url=" + url + "]";
     }
-
- 
 
     public User(String uEmail, String uName, String uPhone, String uPassword, String uGender, String uRole,
             String uAddress, String url) {
@@ -143,7 +132,6 @@ public class User {    //  User = Login-Credentials
     }
 
  
-
     public User() {
         super();
         // TODO Auto-generated constructor stub
