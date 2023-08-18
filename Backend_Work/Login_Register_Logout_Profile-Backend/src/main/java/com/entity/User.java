@@ -9,7 +9,6 @@ import jakarta.persistence.Table;
 @Table(name = "user")
 public class User {    //  User = Login-Credentials
 
-
     @Id
     @Column(name="uEmail", unique=true)
     private String uEmail;
@@ -53,8 +52,6 @@ public class User {    //  User = Login-Credentials
     public String getuEmail() {
         return uEmail;
     }
-
- 
 
     public void setuEmail(String uEmail) {
         this.uEmail = uEmail;
