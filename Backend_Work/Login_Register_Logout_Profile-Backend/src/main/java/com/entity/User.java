@@ -75,31 +75,21 @@ public class User {    //  User = Login-Credentials
         return uPassword;
     }
 
- 
-
     public void setuPassword(String uPassword) {
         this.uPassword = uPassword;
     }
-
- 
 
     public String getuGender() {
         return uGender;
     }
 
- 
-
     public void setuGender(String uGender) {
         this.uGender = uGender;
     }
 
- 
-
     public String getuRole() {
         return uRole;
     }
-
- 
 
     public void setuRole(String uRole) {
         this.uRole = uRole;
