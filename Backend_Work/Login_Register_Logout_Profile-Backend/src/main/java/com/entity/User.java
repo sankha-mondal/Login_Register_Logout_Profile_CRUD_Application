@@ -47,8 +47,6 @@ public class User {    //  User = Login-Credentials
         }
      */
 
- 
-
     public String getuEmail() {
         return uEmail;
     }
@@ -57,31 +55,21 @@ public class User {    //  User = Login-Credentials
         this.uEmail = uEmail;
     }
 
- 
-
     public String getuName() {
         return uName;
     }
-
- 
-
+    
     public void setuName(String uName) {
         this.uName = uName;
     }
-
- 
 
     public String getuPhone() {
         return uPhone;
     }
 
- 
-
     public void setuPhone(String uPhone) {
         this.uPhone = uPhone;
     }
-
- 
 
     public String getuPassword() {
         return uPassword;
