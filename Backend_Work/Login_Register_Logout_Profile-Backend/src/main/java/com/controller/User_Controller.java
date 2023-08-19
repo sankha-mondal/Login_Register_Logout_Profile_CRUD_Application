@@ -38,6 +38,15 @@ public class User_Controller {
 //========================================================================================================================================
 
 		//  Simple Get Operation:- Op:1A
+		//  http://localhost:8585/users_credentials/user/hello_world
+	
+		@GetMapping("/hello_world")
+		public String hello_world() {
+			return "Hello World";
+		}
+		
+	
+		//  Simple Get Operation:- Op:1B
 		//  http://localhost:8585/users_credentials/user/get_data
 	
 		@GetMapping("/get_data")
@@ -46,7 +55,7 @@ public class User_Controller {
 		}
 
 
-		//  Retrieve Operation:-  Op:1B
+		//  Retrieve Operation:-  Op:1C
 		//  http://localhost:8585/users_credentials/user/getAll
 
 		@GetMapping("/getAll")
