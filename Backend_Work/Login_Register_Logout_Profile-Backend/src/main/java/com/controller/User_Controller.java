@@ -65,7 +65,8 @@ public class User_Controller {
 				userRepo.findAll().forEach(user::add);
 	
 				if (user.isEmpty()) {
-					return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+				    // 	return new ResponseEntity<>(HttpStatus.NO_CONTENT);   OR
+					throw new ResourceNotFoundException("No data found");
 				}
 
 			return new ResponseEntity<>(user, HttpStatus.OK);
