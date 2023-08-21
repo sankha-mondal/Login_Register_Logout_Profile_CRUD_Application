@@ -3,6 +3,8 @@ Basic Login-Register-Logout-Profile Application.
 
 Basic CRUD Operation.
 
-For Backend: Spring-Boot
-For Frontend: Angular
-For Database: MySQL
+$ For Backend: Spring-Boot
+
+$ For Frontend: Angular
+
+$ For Database: MySQL
