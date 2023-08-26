@@ -1,0 +1,109 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-3"></div>
+
+        <div class="col-6">
+            <h2 style="text-align:center;">Your Profile</h2><br>
+
+            <form #passwordRef_update="ngForm" (ngSubmit)="get_record_for_Update_Delete(passwordRef_update)" [ngStyle]="styProperty1">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="checkPswd" [(ngModel)]="checkPswd" required
+                        aria-label="Recipient's username" aria-describedby="button-date"
+                        placeholder="Put Your Password...">
+                    <button class="btn btn-success" type="submit" id="button-date"
+                        [disabled]="passwordRef_update.invalid">Get Your Details</button>
+                </div>
+            </form>
+
+
+            <form #userRef_update="ngForm" (ngSubmit)="update_User_In_Db(userRef_update)">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <img style="text-align:center;" src={{this.url}} alt="Passenger Image" width="150" height="140" />
+                </div>
+
+                <label>My Email: </label>
+                <input type="text" name="uEmail" class="form-control" [(ngModel)]="uEmail" readonly /><br />
+
+                <label>My Name: </label>
+                <input type="text" name="uName" class="form-control" [(ngModel)]="uName" ngModel required readonly />
+                <div *ngIf=" userRef_update.controls['uName'].invalid &&
+                            (userRef_update.controls['uName'].dirty   ||   userRef_update.controls['uName'].touched) ">
+                    <span [hidden]="!userRef_update.controls['uName'].errors?.['required']">Name should not be Blank<br></span>
+                </div> <br>
+
+                <label>My Phone No: </label>
+                <input type="text" name="uPhone" class="form-control" [(ngModel)]="uPhone" ngModel required maxlength="10" pattern="[1-9]+[0-9]+" readonly />
+                <div *ngIf=" userRef_update.controls['uPhone'].invalid &&
+                            (userRef_update.controls['uPhone'].dirty   ||   userRef_update.controls['uPhone'].touched) ">
+                    <span [hidden]="!userRef_update.controls['uPhone'].errors?.['required']">Phone number should not be
+                        Blank<br></span>
+                    <span [hidden]="!userRef_update.controls['uPhone'].errors?.['maxlength']">Phone number should not be
+                        exceeded 10 digits<br></span>
+                    <span [hidden]="!userRef_update.controls['uPhone'].errors?.['pattern']">Phone number takes digits
+                        only</span>
+                </div> <br>
+
+                <label>New Password: </label>
+                <input type="text" name="new_password" class="form-control" [(ngModel)]="new_password" ngModel required
+                    minlength="8" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*()_+-/]).{8,}$" />
+                <div *ngIf=" userRef_update.controls['new_password'].invalid &&
+                            (userRef_update.controls['new_password'].dirty   ||   userRef_update.controls['new_password'].touched) ">
+                    <span [hidden]="!userRef_update.controls['new_password'].errors?.['required']">New Password should
+                        not be Blank<br></span>
+                    <span [hidden]="!userRef_update.controls['new_password'].errors?.['minlength']">New Password must be
+                        contain minimum 8 characters<br></span>
+                    <span [hidden]="!userRef_update.controls['new_password'].errors?.['pattern']">New Password should
+                        have at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special
+                        character<br></span>
+                </div> <br>
+
+                <label>Confirm Password: </label>
+                <input type="text" name="confirm_password" class="form-control" [(ngModel)]="confirm_password" ngModel
+                    required minlength="3" />
+                <div *ngIf=" userRef_update.controls['confirm_password'].invalid &&
+                            (userRef_update.controls['confirm_password'].dirty   ||   userRef_update.controls['confirm_password'].touched) ">
+                    <span [hidden]="!userRef_update.controls['confirm_password'].errors?.['required']">Confirm Password
+                        should not be Blank<br></span>
+                    <span [hidden]="!userRef_update.controls['confirm_password'].errors?.['minlength']">Confirm Password
+                        must be contain minimum 3 characters<br></span>
+                </div> <br>
+
+                <label>My Role: </label>
+                <input type="text" name="uRole" class="form-control" [(ngModel)]="uRole"/><br />
+
+                <label>My Address: </label>
+                <input type="text" name="uAddress" class="form-control" [(ngModel)]="uAddress" required readonly />
+
+                <div *ngIf=" userRef_update.controls['uAddress'].invalid &&
+                            (userRef_update.controls['uAddress'].dirty   ||   userRef_update.controls['uAddress'].touched) ">
+                    <span [hidden]="!userRef_update.controls['uAddress'].errors?.['required']">Address should not be
+                        Blank<br></span>
+                </div> <br>
+
+                <label>My Photo URL: </label>
+                <input type="url" name="url" ngModel class="form-control" [(ngModel)]="url" required /><br />
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-info" type="submit" [disabled]="userRef_update.invalid">Click to Update Your
+                        Details</button>
+                </div>
+
+            </form>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary" type="submit" (click)="delete_User()">Click to Delete Your
+                    Profile</button>
+            </div>
+
+            <br><br>
+
+        </div>
+
+        <div class="col-3"></div>
+
+    </div>
+</div>
+
+<!-- ========================================================================================================================= -->
+<!-- ========================================================================================================================= -->

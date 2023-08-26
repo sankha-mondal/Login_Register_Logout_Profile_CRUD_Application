@@ -1,0 +1,16 @@
+.container-fluid {
+    background-color: black;
+}
+.lab_1 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+.lab_2 {
+    color: white;
+    float: right;
+}
+h3 {
+    color: white;
+}

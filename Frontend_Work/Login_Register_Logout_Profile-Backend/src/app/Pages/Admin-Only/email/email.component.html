@@ -1,0 +1,80 @@
+<!-- ============================================ :Sending Email: ===================================================-->
+
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-1">
+            <!-- <h2 class="d-flex justify-content-center" style="color:red;font-size:x-large;"><b>Email Controller</b></h2>  -->
+            <img src="https://phoneky.co.uk/thumbs/screensavers/down/misc/mailsendin501309.gif" alt="" height="200"
+                width="300" [ngStyle]="styProperty1">
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-6">
+
+                <h4 class="mt-2">Email Information</h4>
+                <form #emailRef_send="ngForm" (ngSubmit)="send_Email_with_Attachment(emailRef_send)">
+                    <!-- Template DF -->
+                    <label>Recipient: </label>
+                    <input type="email" class="form-control" name="recipient" [(ngModel)]="recipient" required
+                        pattern="[a-z0-9._+-*/%{^#}]+@[a-z]+.[a-z]+" />
+                    <div *ngIf=" emailRef_send.controls['recipient'].invalid &&
+                                (emailRef_send.controls['recipient'].dirty   ||   emailRef_send.controls['recipient'].touched) ">
+                        <span [hidden]="!emailRef_send.controls['recipient'].errors?.['required']">Recipient Email is
+                            required<br></span>
+                        <span [hidden]="!emailRef_send.controls['recipient'].errors?.['pattern']">Pattern must be
+                            matched</span>
+                    </div> <br>
+
+                    <label>Email Subject: </label>
+                    <input type="text" class="form-control" name="subject" [(ngModel)]="subject" required />
+                    <div *ngIf=" emailRef_send.controls['subject'].invalid &&
+                                (emailRef_send.controls['subject'].dirty   ||   emailRef_send.controls['subject'].touched) ">
+                        <span [hidden]="!emailRef_send.controls['subject'].errors?.['required']">Please mention Subject
+                            here..<br></span>
+                    </div> <br>
+
+                    <div class="mb-3">
+                        <label>Email Body:</label>
+                        <textarea class="form-control" name="msgBody" [(ngModel)]="msgBody" required rows="12"
+                            placeholder="Hey,
+        This is your Booking Details.
+        Have a nice day.
+    
+Thanks & Regards,
+Admin
+admin@ad.com"></textarea>
+
+                    </div>
+
+                    <div *ngIf=" emailRef_send.controls['msgBody'].invalid &&
+                                (emailRef_send.controls['msgBody'].dirty   ||   emailRef_send.controls['msgBody'].touched) ">
+                        <span [hidden]="!emailRef_send.controls['msgBody'].errors?.['required']">Please Email Body
+                            here..<br></span>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" name="attachment" [(ngModel)]="attachment"
+                            (change)="selectFile($event)" required>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="reset" class="btn btn-primary">&nbsp;Reset&nbsp;</button>&nbsp;
+                        <button type="submit" class="btn btn-success" [disabled]="emailRef_send.invalid">Send
+                            Email>></button>
+                    </div> <br><br>
+
+                </form>
+
+            </div>
+
+            <div class="col-6">
+                <img class="mt-5"
+                    src="https://www.getmailbird.com/wp-content/uploads/2020/12/Choosing-your-email-provider.jpg"
+                    alt="">
+            </div>
+
+        </div>
+    </div>
+
+</div>

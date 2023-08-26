@@ -1,0 +1,24 @@
+.col-6 {
+    background-color: rgb(187, 226, 244);
+    /* border: 2px solid black;
+    border-radius: 50%; */
+}
+label,
+h4 {
+    font-weight: bolder;
+}
+h4 {
+    font-size: x-large;
+    color: darkgoldenrod
+}
+span {
+    color: rgb(250, 13, 13);
+    font-weight: bold;
+}
+.container {
+    /* border: 2px solid black;
+    border-radius: 50%; */
+}
+img {
+    border-radius: 25px;
+}

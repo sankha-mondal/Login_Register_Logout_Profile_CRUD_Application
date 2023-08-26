@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="container overflow-hidden">
+        <div class="row gx-5">
+
+            <div class="col-7">
+                <div class="p-3 mt-5">
+                    <label class="lab_1">Good {{bela}}, {{welcome_name}}! <br>
+                        Welcome to SRS.</label>
+                    <h3 class="mt-3">Your place to communicate, collaborate and connect. Let's get started.</h3>
+                    <button type="button" class="btn btn-outline-light m-1">Get Social</button>
+                    <button type="button" class="btn btn-outline-light m-1">Connect with People</button>
+                    <button type="button" class="btn btn-outline-light m-1">Check News and Events</button>
+                </div>
+            </div>
+
+            <div class="col-5">
+                <div>
+                    <label class="lab_2">{{time}}</label>
+                    <br><br>
+                    <img src="https://thedot.wipro.com/media/1044/dots-4-2.gif" alt="" width="500">
+                    <br><br>
+                </div>
+            </div>
+
+        </div>
+        <br><br>
+    </div>
+</div>
+
+
+Simple Clock:
+<div>{{ time | date: 'hh:mm:ss a' }}</div>
+{{time}}
+
+<br />
+
+RxJS Clock:
+<div>{{ rxTime | date: 'hh:mm:ss a' }}</div>

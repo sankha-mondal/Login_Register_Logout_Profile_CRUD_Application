@@ -1,0 +1,22 @@
+.navbar-brand {
+    color: azure;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+img {
+    border-radius: 50%;
+}
+#home {
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+}
+#navbarDropdown {
+    font-size: large;
+    font-weight: bold;
+    color: white;
+}
+input {
+    text-decoration: none;
+    color: aliceblue;
+}

@@ -1,0 +1,32 @@
+footer {
+    padding: 3px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+label {
+    font-weight: bolder;
+    font-size: 20px;
+}
+a {
+    color: black;
+}
+#footer2_left {
+    float: left;
+}
+#footer1_right,
+#footer3_right {
+    float: right;
+}
+.footer3_right_a {
+    color: rgb(247, 247, 189);
+}
+p {
+    color: black;
+}
+p:hover {
+    color: yellow;
+    text-shadow: 1px 1px 10px black, 0 0 25px blue, 0 0 5px darkblue;
+}

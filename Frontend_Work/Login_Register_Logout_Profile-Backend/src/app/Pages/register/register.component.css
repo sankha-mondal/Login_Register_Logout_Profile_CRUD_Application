@@ -1,0 +1,28 @@
+span {
+    color: rgb(250, 13, 13);
+    font-weight: bold;
+}
+.container-fluid {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://e0.pxfuel.com/wallpapers/216/838/desktop-wallpaper-dark-material-black-and-cyan.jpg");
+}
+#logo {
+    border-radius: 50%;
+}
+#url {
+    color: white;
+}
+#login {
+      color: rgb(245, 245, 161);
+}
+label {
+    font-weight: bolder;
+    color: white;
+}
+img {
+    border: 2px solid white;
+}
+.mt-1 {
+    color: aliceblue;
+}

@@ -1,0 +1,25 @@
+#body_about {
+    background-image: url('https://sm.pcmag.com/pcmag_au/how-to/h/how-to-use/how-to-use-microsofts-remote-desktop-connection_bmem.jpg');
+}
+
+.container {
+    background-color: aliceblue;
+    opacity: 0.8;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+img {
+    border-radius: 50%;
+    opacity: 0.8;
+    border: 1px solid black;
+}
+h1 {
+    font-size: xx-large;
+    font-weight: 500;
+}
+#logo {
+    opacity: 1;
+}

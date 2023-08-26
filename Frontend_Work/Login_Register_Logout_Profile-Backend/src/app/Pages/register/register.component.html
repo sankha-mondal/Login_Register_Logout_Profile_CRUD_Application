@@ -1,0 +1,112 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-6 offset-3">
+
+            <div class="text-center">
+                <br>
+                <img id="logo" width=230 src="https://cdn-icons-png.flaticon.com/128/3456/3456426.png" alt="register_logo.jpg"><br>
+                <h2 class="mt-1">Registration Page</h2>
+            </div>
+
+            <form #userRef_store="ngForm" (ngSubmit)="store_User(userRef_store)"> <!-- Template DF -->
+                <!-- <label>PId </label>
+                <input type="number" name="pid" ngModel required placeholder="Use random number"/><br/> -->
+                <!-- Email field -->
+
+                <label>Email: </label>
+                <input type="email" class="form-control" name="uEmail" [(ngModel)]="uEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                <div *ngIf=" userRef_store.controls['uEmail'].invalid &&
+                            (userRef_store.controls['uEmail'].dirty   ||   userRef_store.controls['uEmail'].touched) ">
+                    <span [hidden]="!userRef_store.controls['uEmail'].errors?.['required']">Email is required<br></span>
+                    <span [hidden]="!userRef_store.controls['uEmail'].errors?.['pattern']">Pattern must be matched</span>
+                </div> <br>
+
+                <!-- Name field-->
+                <label>Name: </label>
+                <input type="text" class="form-control" name="uName" [(ngModel)]="uName" required />
+                <div *ngIf=" userRef_store.controls['uName'].invalid &&
+                            (userRef_store.controls['uName'].dirty   ||   userRef_store.controls['uName'].touched) ">
+                    <span [hidden]="!userRef_store.controls['uName'].errors?.['required']">Name is required<br></span>
+                </div> <br>
+
+                <!-- Phone Number field-->
+                <label>Phone No: </label>
+                <input type="text" name="uPhone" class="form-control" [(ngModel)]="uPhone" ngModel required maxlength="10" pattern="[6-9]{1}[0-9]{9}" />
+                <div *ngIf=" userRef_store.controls['uPhone'].invalid &&
+                            (userRef_store.controls['uPhone'].dirty   ||   userRef_store.controls['uPhone'].touched) ">
+                    <span [hidden]="!userRef_store.controls['uPhone'].errors?.['required']">Phone number should not be Blank<br></span>
+                    <span [hidden]="!userRef_store.controls['uPhone'].errors?.['maxlength']">Phone number should not be exceeded 10 digits<br></span>
+                    <span [hidden]="!userRef_store.controls['uPhone'].errors?.['pattern']">Enter a valid phone number</span>
+                </div> <br>
+
+                <!-- Password field -->
+                <label>Password: </label>
+                <input type="text" class="form-control" name="new_password" [(ngModel)]="new_password" required minlength="8" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*()_+-/]).{8,}$" />
+                <div *ngIf=" userRef_store.controls['new_password'].invalid &&
+                             ( userRef_store.controls['new_password'].dirty  ||  userRef_store.controls['new_password'].touched) ">
+                    <span [hidden]="!userRef_store.controls['new_password'].errors?.['required']">Password should not be Blank<br></span>
+                    <span [hidden]="!userRef_store.controls['new_password'].errors?.['minlength']">Password must be contain minimum 8 characters<br></span>
+                    <span [hidden]="!userRef_store.controls['new_password'].errors?.['pattern']">Password should have at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character<br></span>
+                </div> <br>
+
+                <label>Confirm Password: </label>
+                <input type="text" name="confirm_password" class="form-control" [(ngModel)]="confirm_password" ngModel required minlength="3" />
+                <div *ngIf=" userRef_store.controls['confirm_password'].invalid &&
+                            (userRef_store.controls['confirm_password'].dirty   || userRef_store.controls['confirm_password'].touched) ">
+                    <span [hidden]="!userRef_store.controls['confirm_password'].errors?.['required']">Confirm Password should not be Blank<br></span>
+                    <span [hidden]="!userRef_store.controls['confirm_password'].errors?.['minlength']">Confirm Password must be contain minimum 3 characters<br></span>
+                </div> <br>
+
+                <!-- Role field -->
+                <label>Role: </label>
+                <input type="text" class="form-control" name="uRole" [(ngModel)]="uRole" required pattern="USER" placeholder="USER" />
+                <div *ngIf=" userRef_store.controls['uRole'].invalid &&
+                            (userRef_store.controls['uRole'].dirty   ||   userRef_store.controls['uRole'].touched) ">
+                    <span [hidden]="!userRef_store.controls['uRole'].errors?.['required']">USER Role is required<br></span>
+                    <span [hidden]="!userRef_store.controls['uRole'].errors?.['pattern']">Enter Role as USER</span>
+                </div> <br>
+
+                <!-- Address field -->
+                <div class="mb-3">
+                    <label>Address</label>
+                    <textarea class="form-control" name="pAddress" [(ngModel)]="uAddress" required id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div *ngIf=" userRef_store.controls['uAddress'].invalid &&
+                            (userRef_store.controls['uAddress'].dirty   ||   userRef_store.controls['uAddress'].touched) ">
+                    <span [hidden]="!userRef_store.controls['uAddress'].errors?.['required']">Address is required<br></span>
+                </div> <br>
+
+                <!-- Photo url field -->
+                <label id="url">Photo URL: </label>
+                <input type="url" class="form-control" name="url" [(ngModel)]="url" ngModel required/><br>
+
+                <!-- Term & Conditions field -->
+                <!-- <section class="example-section" [formGroup]="toppings">
+                    <input class="form-check-input" type="checkbox" formControlName="terms"> I have read and agree to the <a href="#">Terms & Conditions</a>.
+                    <p style="float:right;"><a routerLink="/login">Old User? Login here</a></p>
+                </section> <br> -->
+
+                <p><a class="btn" id="login" routerLink="/login">Old User? Login here</a></p>
+
+                <!-- <input type="reset" value="Reset"/>
+                <input type="submit" value="Register" [disabled]="userRef_store.invalid"/>  <br><br>  -->
+
+                <!-- button field -->
+                <div class="d-flex justify-content-center">
+                    <button type="reset" class="btn btn-primary btn-lg">&nbsp;Reset&nbsp;</button>&nbsp;
+                    <button type="submit" class="btn btn-success btn-lg" [disabled]="userRef_store.invalid">Register</button>
+                </div> <br><br>
+
+                <!-- button field -->
+                <!-- <div class="d-flex justify-content-center">
+                    <button type="reset" class="btn btn-primary btn-lg">&nbsp;Reset&nbsp;</button>&nbsp;
+                     <button type="submit" class="btn btn-success btn-lg" [disabled]="userRef_store1.invalid || !toppings.value.terms">Register</button>
+                </div> -->
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

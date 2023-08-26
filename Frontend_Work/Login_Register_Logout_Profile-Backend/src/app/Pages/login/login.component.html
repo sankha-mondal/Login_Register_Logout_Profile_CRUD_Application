@@ -1,0 +1,78 @@
+<div class="container-fluid">
+
+    <br>
+    <div class="custom-loader"></div>
+
+    <div class="container px-4">
+        <div class="row g-1"> <!-- g-1: maintain the gap b/w two boxs-->
+
+            <div class="col-1"></div>
+            <div class="col">
+                <div class="p-2 bg-light mt-3 mb-5" id="box1">
+                    <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=2000" height="635" width="470" alt="">
+                </div>
+            </div>
+
+            <div class="col">
+
+                <div class="p-3 bg-light mt-3 mb-5" id="box2">
+                    <div class="text-center">
+                        <img id="logo" width=180 height="180" src="https://cdn-icons-png.flaticon.com/128/295/295128.png" alt="login_logo.jpg"><br>
+                        <!-- <h1 class="mt-1">Login Page</h1> -->
+                    </div>
+
+                    <form #loginRef="ngForm" (ngSubmit)="loginUser(loginRef)">
+                        <label>Email: </label>
+                        <input type="email" name="uEmail" ngModel required minlength="3" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter email...">
+
+                        <div *ngIf=" loginRef.controls['uEmail'].invalid &&
+                                    (loginRef.controls['uEmail'].dirty || loginRef.controls['uEmail'].touched) ">
+                            <span [hidden]="!loginRef.controls['uEmail'].errors?.['required']">Email is required<br></span>
+                            <span [hidden]="!loginRef.controls['uEmail'].errors?.['minlength']">Email must be contain 3 characters <br></span>
+                            <span [hidden]="!loginRef.controls['uEmail'].errors?.['pattern']">Pattern must be matched <br></span>
+                        </div>
+                        <br>
+
+                        <label>Password: </label>
+                        <label style="font-size:small;float:right;">
+                            <a type="button" (click)="goto_forgot_passwprd_page()"><u id="forgot">Forgot Password?</u></a>
+                        </label>
+                        <input type="password" name="uPassword" ngModel required class="form-control" placeholder="Enter password...">
+                        <div *ngIf="loginRef.controls['uPassword'].invalid &&
+                                   (loginRef.controls['uPassword'].dirty || loginRef.controls['uPassword'].touched) ">
+                            <span [hidden]="!loginRef.controls['uPassword'].errors?.['required']">Password is required <br></span>
+                        </div>
+                        <br>
+
+                        <p (click)="goto_register_page()"><a type="button">Doesn't have an account yet? <u id="reg">Register here</u></a></p><br>
+
+                        <div class="d-flex justify-content-center">
+                            <button type="reset" class="btn btn-primary">&nbsp;Reset&nbsp;</button>&nbsp;
+                            <button type="submit" class="btn btn-success"  [disabled]="loginRef.invalid">&nbsp;Login&nbsp;</button>
+                        </div> <br>
+
+                    </form>
+
+                    <div class="text-center">
+                        <p id="or">----------------------------- or login with ------------------------------</p><br>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-outline-danger"><i class="fa fa-google" style="font-size:20px;color:red"></i>&nbsp; Google&nbsp;</button>&nbsp;
+
+                            <button type="button" class="btn btn-outline-primary"><i class="fa fa-linkedin" style="font-size:20px;color:blue"></i>&nbsp;LinkedIn&nbsp;</button>&nbsp;
+
+                            <button type="button" class="btn btn-outline-info" style="text-shadow:none"><i class="fa fa-facebook" style="font-size:20x;color:rgb(10, 189, 193)"></i>&nbsp; Facebook&nbsp;</button>&nbsp;
+
+                            <button type="button" class="btn btn-outline-dark"><i class="fa fa-github" style="font-size:20px;color:black"></i>&nbsp; GitHub&nbsp;</button>
+                        </div> <br>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-1"></div>
+
+        </div>
+    </div>
+
+    <br>
+</div>

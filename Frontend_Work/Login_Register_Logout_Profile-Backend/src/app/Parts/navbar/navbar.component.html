@@ -1,0 +1,94 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #227df4;">
+
+    <div class="container-fluid">
+
+        <img [routerLink]="root" src="https://cdn-icons-png.flaticon.com/128/870/870119.png" alt="" width="50"
+            height="50" class="d-inline-block align-text-top">
+
+        <!-- <a class="navbar-brand" [routerLink]="root">&nbsp;&nbsp;SRS</a> -->
+
+        <a class="btn navbar-brand" (click)="goto_home_page()">&nbsp;&nbsp;Navbar</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="btn nav-link active" aria-current="page" id="home" (click)="goto_home_page()">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="btn nav-link active" aria-current="page" id="home" (click)="goto_aboutUs_page()">About Us</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        &nbsp; Dashboard
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <button class="dropdown-item" (click)="goto_login_page()" [disabled]="f_login"
+                                (click)="login_disable_1st()">
+                                <img src="https://cdn-icons-png.flaticon.com/128/295/295128.png" alt=""
+                                    width="20">&nbsp;
+                                <b>Login</b>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="dropdown-item" (click)="goto_register_page()" [disabled]="f_reg">
+                                <img src="https://cdn-icons-png.flaticon.com/128/9734/9734498.png" alt=""
+                                    width="20">&nbsp;
+                                Register
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="dropdown-item" (click)="goto_profile_page()">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1154/1154473.png" alt=""
+                                    width="20">&nbsp;
+                                Profile
+                            </button>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li style="background-color:#227df4;">
+                            <button class="dropdown-item" [disabled]="f_logout" (click)="logout()">
+                                <img src="https://cdn-icons-png.flaticon.com/128/10313/10313377.png" alt=""
+                                    width="20">&nbsp;
+                                <b style="font-size:large;">Logout</b>
+                            </button>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li class="nav-item">
+                    <input type="button" value="Admin" class="btn btn-link" (click)="admin_home_page()"
+                        [disabled]="flag_admin" />
+                </li>
+
+                <li class="nav-item">
+                    <input type="button" value="Passenger" class="btn btn-link" (click)="passenger_home_page()"
+                        [disabled]="flag_passenger" />
+                </li>
+            </ul>
+
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+
+        </div>
+    </div>
+
+</nav>
