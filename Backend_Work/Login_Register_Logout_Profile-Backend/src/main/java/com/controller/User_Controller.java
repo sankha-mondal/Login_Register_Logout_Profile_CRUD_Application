@@ -32,12 +32,12 @@ public class User_Controller {
 	User_Repository userRepo;
 
 	@Autowired
-	User_Service userService;
+	User_Service userService;  
 
 //*************************************************** : CRUD Operation : ***************************************************************** 
 //========================================================================================================================================
 
-		//  Simple Get Operation:- Op:1A
+		//  Simple Get Operation:- Op:A
 		//  http://localhost:8585/users_credentials/user/hello_world
 	
 		@GetMapping("/hello_world")
@@ -46,7 +46,7 @@ public class User_Controller {
 		}
 	
 	
-		//  Simple Get Operation:- Op:1B
+		//  Simple Get Operation:- Op:B
 		//  http://localhost:8585/users_credentials/user/get_data
 	
 		@GetMapping("/get_data")
@@ -54,8 +54,22 @@ public class User_Controller {
 			return Map.of("Name","Sankha Subhra");
 		}
 
+		//  Retrieve Operation:-  Op:C
+		// http://localhost:8585/users_credentials/user/get_Json
+		
+		@RequestMapping("/get_Json")
+		public List<User> getJson() {
+			return Arrays.asList(
+					new User("rabi@gmail.com", "Rabi", "9876543219", "R123", "MALE", "USER", "Kolkata", "rrr"),
+					new User("ajay@gmail.com", "Ajay", "8978675453", "A123", "MALE", "USER", "Babgalore", "aaa"),
+					new User("hasr@gmail.com", "Hars", "7865093748", "H123", "MALE", "USER", "Mumbai", "ppp")
+					);
+					
+		}
+	
+//=======================================================================================================================================
 
-		//  Retrieve Operation:-  Op:1C
+		//  Retrieve Operation:-  Op:1
 		//  http://localhost:8585/users_credentials/user/getAll
 
 		@GetMapping("/getAll")
