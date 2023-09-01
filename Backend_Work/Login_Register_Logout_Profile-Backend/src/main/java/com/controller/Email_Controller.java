@@ -17,7 +17,7 @@ public class Email_Controller {
 
 	@Autowired private Email_Service emailService;
 	
-//  =================================================================================================
+//  =================================================================================================================================
 
 	// Sending a simple Email
 	// http://localhost:8585/users_credentials/email/sendMail
@@ -30,7 +30,7 @@ public class Email_Controller {
 			return status;
 	}
 	
-//  =================================================================================================
+//  =================================================================================================================================
 
 	// Sending email with attachment
 	// http://localhost:8585/users_credentials/email/sendMailWithAttachment
