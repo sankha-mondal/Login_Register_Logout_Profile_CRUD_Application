@@ -63,8 +63,7 @@ public class User_Controller {
 					new User("rabi@gmail.com", "Rabi", "9876543219", "R123", "MALE", "USER", "Kolkata", "rrr"),
 					new User("ajay@gmail.com", "Ajay", "8978675453", "A123", "MALE", "USER", "Babgalore", "aaa"),
 					new User("hasr@gmail.com", "Hars", "7865093748", "H123", "MALE", "USER", "Mumbai", "ppp")
-					);
-					
+					);		
 		}
 	
 //=======================================================================================================================================
@@ -99,36 +98,6 @@ public class User_Controller {
 
 			return new ResponseEntity<>(user, HttpStatus.OK);
 		}
-		
-//=======================================================================================================================================
-		
-		//  Retrieve data by User-Name :-  Op:2B
-		//  http://localhost:8585/users_credentials/user/getUserByName/{uName}
-
-		@GetMapping("/getUserByName/{uName}")
-		public ResponseEntity<User> getUserByName(@PathVariable("uName") String uName) {
-
-			User user = userRepo.findByuNameIgnoreCase(uName);
-			if(user == null) {
-				throw new ResourceNotFoundException("Not found User with name = " + uName);
-			}
-			return new ResponseEntity<>(user, HttpStatus.OK);
-		} 
-
-//=======================================================================================================================================
-
-		//  Retrieve data by User-Gender :-  Op:2C
-		//  http://localhost:8585/users_credentials/user/getUserByGender/{uGender}
-
-		@GetMapping("/getUserByGender/{uGender}")
-		public ResponseEntity<List<User>> getUserByGender(@PathVariable("uGender") String uGender) {
-
-			List<User> users = userRepo.findByuGenderIgnoreCase(uGender);
-			if(users.isEmpty()) {
-				throw new ResourceNotFoundException(uGender + " Users are Not Available");
-			}
-			return new ResponseEntity<>(users, HttpStatus.OK);
-		} 
 		
 //=======================================================================================================================================
 
@@ -228,6 +197,35 @@ public class User_Controller {
 				return userService.find_UserByEmailPassword(user);
 		}
 
+//=======================================================================================================================================
+		
+		//  Retrieve data by User-Name :-  Op:2B
+		//  http://localhost:8585/users_credentials/user/getUserByName/{uName}
+
+		@GetMapping("/getUserByName/{uName}")
+		public ResponseEntity<User> getUserByName(@PathVariable("uName") String uName) {
+
+			User user = userRepo.findByuNameIgnoreCase(uName);
+			if(user == null) {
+				throw new ResourceNotFoundException("Not found User with name = " + uName);
+			}
+			return new ResponseEntity<>(user, HttpStatus.OK);
+		} 
+
+//=======================================================================================================================================
+
+		//  Retrieve data by User-Gender :-  Op:2C
+		//  http://localhost:8585/users_credentials/user/getUserByGender/{uGender}
+
+		@GetMapping("/getUserByGender/{uGender}")
+		public ResponseEntity<List<User>> getUserByGender(@PathVariable("uGender") String uGender) {
+
+			List<User> users = userRepo.findByuGenderIgnoreCase(uGender);
+			if(users.isEmpty()) {
+				throw new ResourceNotFoundException(uGender + " Users are Not Available");
+			}
+			return new ResponseEntity<>(users, HttpStatus.OK);
+		} 
 
 //=====================================================================================================================================
 //=====================================================================================================================================
