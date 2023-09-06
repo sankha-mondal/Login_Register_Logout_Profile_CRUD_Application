@@ -9,8 +9,8 @@ import com.entity.User;
 @Repository
 public interface User_Repository extends JpaRepository<User, String> {
 	
-//	@Query("select p from Passenger p where p.pEmail = :pEmail and p.pPassword = :pPassword")
-//	public int findPassengerByEmail_Pass(@Param("pEmail") String pEmail,@Param("pPassword") String pPassword);
+	public User findByuNameIgnoreCase(String uName);  // Op: 2B
+	public List<User> findByuGenderIgnoreCase(String uGender);  // Op: 2C
 
 }
 
