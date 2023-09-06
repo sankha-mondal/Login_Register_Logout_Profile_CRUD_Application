@@ -9,8 +9,8 @@ import com.entity.User;
 @Repository
 public interface User_Repository extends JpaRepository<User, String> {
 	
-	public User findByuNameIgnoreCase(String uName);  // Op: 2B
-	public List<User> findByuGenderIgnoreCase(String uGender);  // Op: 2C
+	public User findUserByuNameIgnoreCase(String uName);  // Op: 2B
+	public List<User> findUserByuGenderIgnoreCase(String uGender);  // Op: 2C
 
 }
 
