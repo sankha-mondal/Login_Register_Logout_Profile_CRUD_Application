@@ -205,7 +205,7 @@ public class User_Controller {
 		@GetMapping("/getUserByName/{uName}")
 		public ResponseEntity<User> getUserByName(@PathVariable("uName") String uName) {
 
-			User user = userRepo.findByuNameIgnoreCase(uName);
+			User user = userRepo.findUserByuNameIgnoreCase(uName);
 			if(user == null) {
 				throw new ResourceNotFoundException("Not found User with name = " + uName);
 			}
@@ -220,7 +220,7 @@ public class User_Controller {
 		@GetMapping("/getUserByGender/{uGender}")
 		public ResponseEntity<List<User>> getUserByGender(@PathVariable("uGender") String uGender) {
 
-			List<User> users = userRepo.findByuGenderIgnoreCase(uGender);
+			List<User> users = userRepo.findUserByuGenderIgnoreCase(uGender);
 			if(users.isEmpty()) {
 				throw new ResourceNotFoundException(uGender + " Users are Not Available");
 			}
