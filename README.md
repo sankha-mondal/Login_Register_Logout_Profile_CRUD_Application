@@ -13,7 +13,7 @@ $ For Database: MySQL
 ![LoginPage](https://github.com/sankha-mondal/Login_Register_Logout_Profile_CRUD_Application/assets/99641675/ab25b0ae-0c0e-405c-a99a-7f9654f0848b)
 
 # Registration Page:
-![Reg1Page](https://github.com/sankha-mondal/Login_Register_Logout_Profile_CRUD_Application/assets/99641675/5f2afd96-2366-4f73-82ff-d78240fafb5d)
+![Reg1Page](https://github.com/sankha-mondal/Login_Register_Logout_Profile_CRUD_Application/assets/99641675/68c5b3fe-31c1-45f0-af67-ef8f74d97dac)
 ![Reg2Page](https://github.com/sankha-mondal/Login_Register_Logout_Profile_CRUD_Application/assets/99641675/e6fba74b-8612-437c-85ff-2831286b4f9f)
 
 # Profile Page:
