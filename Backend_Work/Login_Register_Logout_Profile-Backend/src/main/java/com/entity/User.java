@@ -131,12 +131,10 @@ public class User {    //  User = Login-Credentials
         this.url = url;
     }
 
- 
     public User() {
         super();
         // TODO Auto-generated constructor stub
     }
-
 
 }
 
